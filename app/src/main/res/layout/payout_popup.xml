@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical" android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:gravity="center"
-                  android:background="#000"
-                  android:padding="10px">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black">
 
         <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is a popup window"
-                android:textColor="#fff"/>
+                android:id="@+id/payoutTotal"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                android:gravity="center"/>
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Close"
-                android:id="@+id/closePopupBtn"/>
+        <TableLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="2 shares" />
+                <TextView style="@style/ShareValue" android:id="@+id/twoShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="3 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/threeShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="4 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/fourShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="5 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/fiveShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="6 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/sixShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="7 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/sevenShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="8 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/eightShares"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="9 shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/nineShares"/>
+            </TableRow>
+
+            <TableRow style="@style/BottomPopupRow">
+                <TextView style="@style/BottomPopupButton" android:text="Clear" android:id="@+id/popupClear"/>
+                <TextView style="@style/BottomPopupButton" android:text="Back" android:id="@+id/popupBack"/>
+            </TableRow>
+
+        </TableLayout>
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

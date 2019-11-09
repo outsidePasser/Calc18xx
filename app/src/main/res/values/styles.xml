@@ -8,6 +8,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ResultRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55sp</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:gravity">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/displayRow</item>
+        <item name="android:textSize">40sp</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="ExpressionRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">125sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">end</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:textColor">@color/expressionRows</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
     <style name="NumberButtonStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -31,26 +52,45 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="ResultRowStyle">
+    <style name="ShareRow">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">55sp</item>
-        <item name="android:ellipsize">start</item>
-        <item name="android:gravity">end</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:textColor">@color/displayRow</item>
-        <item name="android:textSize">40sp</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
     </style>
 
-    <style name="ExpressionRowStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">125sp</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:gravity">end</item>
-        <item name="android:maxLines">4</item>
-        <item name="android:textColor">@color/expressionRows</item>
-        <item name="android:textSize">25sp</item>
+    <style name="ShareLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">15sp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="ShareValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">15sp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="BottomPopupRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BottomPopupButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_margin">0.5dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 </resources>

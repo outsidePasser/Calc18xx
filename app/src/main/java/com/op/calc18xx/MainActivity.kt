@@ -6,10 +6,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvExpression.text = stopsStringBuilder.toString()
-        tvResult.text = stopsTotal.toString()
+        tvResult.text = stops.sum().toString()
     }
 
     private fun payout() {
@@ -77,6 +76,29 @@ class MainActivity : AppCompatActivity() {
         val view = inflater.inflate(R.layout.payout_popup,null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT)
+
+        val stopsSum = stops.sum()
+
+        view.findViewById<TextView>(R.id.payoutTotal).text = stopsSum.toString()
+        view.findViewById<TextView>(R.id.twoShares).text = (stopsSum * 2 / 10).toString()
+        view.findViewById<TextView>(R.id.threeShares).text = (stopsSum * 3 / 10).toString()
+        view.findViewById<TextView>(R.id.fourShares).text = (stopsSum * 4 / 10).toString()
+        view.findViewById<TextView>(R.id.fiveShares).text = (stopsSum * 5 / 10).toString()
+        view.findViewById<TextView>(R.id.sixShares).text = (stopsSum * 6 / 10).toString()
+        view.findViewById<TextView>(R.id.sevenShares).text = (stopsSum * 7 / 10).toString()
+        view.findViewById<TextView>(R.id.eightShares).text = (stopsSum * 8 / 10).toString()
+        view.findViewById<TextView>(R.id.nineShares).text = (stopsSum * 9 / 10).toString()
+
+        view.findViewById<TextView>(R.id.popupBack).setOnClickListener {
+            popupWindow.dismiss()
+        }
+
+        view.findViewById<TextView>(R.id.popupClear).setOnClickListener {
+            clear()
+            popupWindow.dismiss()
+        }
+
         popupWindow.showAtLocation(root_layout, Gravity.CENTER, 0, 0)
+
     }
 }

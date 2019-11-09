@@ -6,4 +6,7 @@
     <color name="numberButton">#455A64</color>
     <color name="expressionRows">#FFA500</color>
     <color name="displayRow">#FFFFFF</color>
+    <color name="evenBackground">#414345</color>
+    <color name="oddBackground">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>
