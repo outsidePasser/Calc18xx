@@ -13,28 +13,25 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val stops = ArrayList<Int>()
+    private val stops = ArrayList<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvTen.setOnClickListener { addStop(10) }
-        tvTwenty.setOnClickListener { addStop(20) }
-        tvThirty.setOnClickListener { addStop(30) }
-        tvForty.setOnClickListener { addStop(40) }
-        tvFifty.setOnClickListener { addStop(50) }
-        tvSixty.setOnClickListener { addStop(60) }
-        tvSeventy.setOnClickListener { addStop(70) }
-        tvEighty.setOnClickListener { addStop(80) }
-        tvNinety.setOnClickListener { addStop(90) }
-        tvOneHundred.setOnClickListener { addStop(100) }
-
-        tvClear.setOnClickListener { clear() }
-        tvBackup.setOnClickListener { removeStop() }
-
-        tvPayout.setOnClickListener { payout() }
-
+        ten.setOnClickListener { addStop(10) }
+        twenty.setOnClickListener { addStop(20) }
+        thirty.setOnClickListener { addStop(30) }
+        forty.setOnClickListener { addStop(40) }
+        fifty.setOnClickListener { addStop(50) }
+        sixty.setOnClickListener { addStop(60) }
+        seventy.setOnClickListener { addStop(70) }
+        eighty.setOnClickListener { addStop(80) }
+        ninety.setOnClickListener { addStop(90) }
+        oneHundred.setOnClickListener { addStop(100) }
+        clear.setOnClickListener { clear() }
+        backup.setOnClickListener { removeStop() }
+        payout.setOnClickListener { payout() }
     }
 
     private fun addStop(stopValue: Int) {
@@ -57,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateDisplay() {
         print("updateDisplay")
         var stopsTotal = 0
-        var stopsStringBuilder = StringBuilder()
+        val stopsStringBuilder = StringBuilder()
 
         stops.forEach {
             stopsTotal += it
@@ -67,8 +64,8 @@ class MainActivity : AppCompatActivity() {
             stopsStringBuilder.append(it)
         }
 
-        tvExpression.text = stopsStringBuilder.toString()
-        tvResult.text = stops.sum().toString()
+        expression.text = stopsStringBuilder.toString()
+        result.text = stops.sum().toString()
     }
 
     private fun payout() {
@@ -99,6 +96,5 @@ class MainActivity : AppCompatActivity() {
         }
 
         popupWindow.showAtLocation(root_layout, Gravity.CENTER, 0, 0)
-
     }
 }

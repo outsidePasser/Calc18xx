@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Calc18xx</string>
+
+    <string name="button_10">10</string>
+    <string name="button_20">20</string>
+    <string name="button_30">30</string>
+    <string name="button_40">40</string>
+    <string name="button_50">50</string>
+    <string name="button_60">60</string>
+    <string name="button_70">70</string>
+    <string name="button_80">80</string>
+    <string name="button_90">90</string>
+    <string name="button_100">100</string>
+    <string name="button_clear">Clear</string>
+    <string name="button_back">X</string>
+    <string name="button_payout">Pay Out</string>
+
 </resources>
