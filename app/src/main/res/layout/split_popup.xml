@@ -21,8 +21,8 @@
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text=""/>
-                <TextView style="@style/ShareLabel" android:text="Player"/>
-                <TextView style="@style/ShareValue" android:text="Company"/>
+                <TextView style="@style/ShareLabel" android:text="@string/player_header"/>
+                <TextView style="@style/ShareLabel" android:text="@string/company_header"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">

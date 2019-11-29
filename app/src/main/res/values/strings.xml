@@ -20,6 +20,9 @@
     <string name="pay_full_header">Pay Full:  %1$d</string>
     <string name="pay_split_header">Split:  %1$d</string>
 
+    <string name="player_header">Player</string>
+    <string name="company_header">Company</string>
+
     <string name="_0_shares">0 shares</string>
     <string name="_1_share">1 share</string>
     <string name="_2_shares">2 shares</string>

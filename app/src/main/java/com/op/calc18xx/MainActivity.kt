@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun payout() {
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.payout_popup, null)
+        val view = inflater.run { inflate(R.layout.payout_popup, null) }
         val popupWindow = PopupWindow(
             view, LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun split() {
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.split_popup, null)
+        val view = inflater.run { inflate(R.layout.split_popup, null) }
         val popupWindow = PopupWindow(
             view, LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
