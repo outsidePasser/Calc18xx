@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         clear.setOnClickListener { clear() }
         backup.setOnClickListener { removeStop() }
         payout.setOnClickListener { payout() }
+        split.setOnClickListener { split() }
     }
 
     private fun addStop(stopValue: Int) {
@@ -52,7 +53,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateDisplay() {
-        print("updateDisplay")
         var stopsTotal = 0
         val stopsStringBuilder = StringBuilder()
 
@@ -69,14 +69,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun payout() {
-        val inflater:LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.payout_popup,null)
-        val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT)
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = inflater.inflate(R.layout.payout_popup, null)
+        val popupWindow = PopupWindow(
+            view, LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
 
         val stopsSum = stops.sum()
 
-        view.findViewById<TextView>(R.id.payoutTotal).text = stopsSum.toString()
+        view.findViewById<TextView>(R.id.payoutTotal).text = getString(R.string.pay_full_header, stopsSum)
         view.findViewById<TextView>(R.id.twoShares).text = (stopsSum * 2 / 10).toString()
         view.findViewById<TextView>(R.id.threeShares).text = (stopsSum * 3 / 10).toString()
         view.findViewById<TextView>(R.id.fourShares).text = (stopsSum * 4 / 10).toString()
@@ -90,6 +92,64 @@ class MainActivity : AppCompatActivity() {
             popupWindow.dismiss()
         }
 
+        view.findViewById<TextView>(R.id.popupSplit).setOnClickListener {
+            popupWindow.dismiss()
+            split()
+        }
+
+        view.findViewById<TextView>(R.id.popupClear).setOnClickListener {
+            clear()
+            popupWindow.dismiss()
+        }
+
+        popupWindow.showAtLocation(root_layout, Gravity.CENTER, 0, 0)
+    }
+
+    private fun split() {
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = inflater.inflate(R.layout.split_popup, null)
+        val popupWindow = PopupWindow(
+            view, LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+
+        val stopsSum = stops.sum()
+        val companyPayout = ((stopsSum / 10) / 2) * 10
+        val perSharePayout = (stopsSum - companyPayout) / 10
+
+        view.findViewById<TextView>(R.id.payoutTotal).text = getString(R.string.pay_split_header, stopsSum)
+        view.findViewById<TextView>(R.id.zeroShares).text = 0.toString()
+        view.findViewById<TextView>(R.id.oneShare).text = perSharePayout.toString()
+        view.findViewById<TextView>(R.id.twoShares).text = (perSharePayout * 2).toString()
+        view.findViewById<TextView>(R.id.threeShares).text = (perSharePayout * 3).toString()
+        view.findViewById<TextView>(R.id.fourShares).text = (perSharePayout * 4).toString()
+        view.findViewById<TextView>(R.id.fiveShares).text = (perSharePayout * 5).toString()
+        view.findViewById<TextView>(R.id.sixShares).text = (perSharePayout * 6).toString()
+        view.findViewById<TextView>(R.id.sevenShares).text = (perSharePayout * 7).toString()
+        view.findViewById<TextView>(R.id.eightShares).text = (perSharePayout * 8).toString()
+        view.findViewById<TextView>(R.id.nineShares).text = (perSharePayout * 9).toString()
+        view.findViewById<TextView>(R.id.tenShares).text = (perSharePayout * 10).toString()
+
+        view.findViewById<TextView>(R.id.zeroSharesCompany).text = companyPayout.toString()
+        view.findViewById<TextView>(R.id.oneShareCompany).text = (companyPayout + perSharePayout).toString()
+        view.findViewById<TextView>(R.id.twoSharesCompany).text = (companyPayout + perSharePayout * 2).toString()
+        view.findViewById<TextView>(R.id.threeSharesCompany).text = (companyPayout + perSharePayout * 3).toString()
+        view.findViewById<TextView>(R.id.fourSharesCompany).text = (companyPayout + perSharePayout * 4).toString()
+        view.findViewById<TextView>(R.id.fiveSharesCompany).text = (companyPayout + perSharePayout * 5).toString()
+        view.findViewById<TextView>(R.id.sixSharesCompany).text = (companyPayout + perSharePayout * 6).toString()
+        view.findViewById<TextView>(R.id.sevenSharesCompany).text = (companyPayout + perSharePayout * 7).toString()
+        view.findViewById<TextView>(R.id.eightSharesCompany).text = (companyPayout + perSharePayout * 8).toString()
+        view.findViewById<TextView>(R.id.nineSharesCompany).text = (companyPayout + perSharePayout * 9).toString()
+        view.findViewById<TextView>(R.id.tenSharesCompany).text = (companyPayout + perSharePayout * 10).toString()
+
+        view.findViewById<TextView>(R.id.popupBack).setOnClickListener {
+            popupWindow.dismiss()
+        }
+
+        view.findViewById<TextView>(R.id.popupPayout).setOnClickListener {
+            popupWindow.dismiss()
+            payout()
+        }
         view.findViewById<TextView>(R.id.popupClear).setOnClickListener {
             clear()
             popupWindow.dismiss()

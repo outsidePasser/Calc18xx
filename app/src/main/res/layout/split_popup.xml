@@ -4,7 +4,7 @@
                                              android:layout_height="match_parent">
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="280dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:background="@android:color/black"
             tools:ignore="MissingConstraints">
@@ -20,48 +20,80 @@
         <TableLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
             <TableRow style="@style/ShareRow">
-                <TextView style="@style/ShareLabel" android:text="@string/_2_shares" />
+                <TextView style="@style/ShareLabel" android:text=""/>
+                <TextView style="@style/ShareLabel" android:text="Player"/>
+                <TextView style="@style/ShareValue" android:text="Company"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="@string/_0_shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/zeroShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/zeroSharesCompany"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="@string/_1_share"/>
+                <TextView style="@style/ShareValue" android:id="@+id/oneShare"/>
+                <TextView style="@style/ShareValue" android:id="@+id/oneShareCompany"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="@string/_2_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/twoShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/twoSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_3_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/threeShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/threeSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_4_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/fourShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/fourSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_5_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/fiveShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/fiveSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_6_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/sixShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/sixSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_7_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/sevenShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/sevenSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_8_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/eightShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/eightSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/ShareRow">
                 <TextView style="@style/ShareLabel" android:text="@string/_9_shares"/>
                 <TextView style="@style/ShareValue" android:id="@+id/nineShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/nineSharesCompany"/>
+            </TableRow>
+
+            <TableRow style="@style/ShareRow">
+                <TextView style="@style/ShareLabel" android:text="@string/_10_shares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/tenShares"/>
+                <TextView style="@style/ShareValue" android:id="@+id/tenSharesCompany"/>
             </TableRow>
 
             <TableRow style="@style/BottomPopupRow">
                 <TextView style="@style/BottomPopupButton" android:text="@string/button_clear" android:id="@+id/popupClear"/>
-                <TextView style="@style/BottomPopupButton" android:text="@string/button_split" android:id="@+id/popupSplit"/>
+                <TextView style="@style/BottomPopupButton" android:text="@string/button_payout" android:id="@+id/popupPayout"/>
                 <TextView style="@style/BottomPopupButton" android:text="@string/button_back" android:id="@+id/popupBack"/>
             </TableRow>
 

@@ -12,7 +12,24 @@
     <string name="button_90">90</string>
     <string name="button_100">100</string>
     <string name="button_clear">Clear</string>
-    <string name="button_back">X</string>
-    <string name="button_payout">Pay Out</string>
+    <string name="button_back">Back</string>
+    <string name="button_x">X</string>
+    <string name="button_payout">Pay Full</string>
+    <string name="button_split">Split</string>
+
+    <string name="pay_full_header">Pay Full:  %1$d</string>
+    <string name="pay_split_header">Split:  %1$d</string>
+
+    <string name="_0_shares">0 shares</string>
+    <string name="_1_share">1 share</string>
+    <string name="_2_shares">2 shares</string>
+    <string name="_3_shares">3 shares</string>
+    <string name="_4_shares">4 shares</string>
+    <string name="_5_shares">5 shares</string>
+    <string name="_6_shares">6 shares</string>
+    <string name="_7_shares">7 shares</string>
+    <string name="_8_shares">8 shares</string>
+    <string name="_9_shares">9 shares</string>
+    <string name="_10_shares">10 shares</string>
 
 </resources>

@@ -46,18 +46,6 @@
         <item name="android:layout_margin">0.5dp</item>
     </style>
 
-    <style name="CalculateButtonStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">100sp</item>
-        <item name="android:ellipsize">start</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:textSize">30sp</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="android:background">@color/numberButton</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:gravity">center</item>
-    </style>
-
     <style name="ShareRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>

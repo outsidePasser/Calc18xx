@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/black"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/root_layout">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:id="@+id/root_layout">
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
 
-        <TextView android:id="@+id/result" style="@style/ResultRow" />
-        <TextView android:id="@+id/expression" style="@style/ExpressionRow" />
-
-        <LinearLayout style="@style/NumberButtonRow">
-            <TextView android:id="@+id/ten" style="@style/NumberButton" android:text="@string/button_10" />
-            <TextView android:id="@+id/twenty" style="@style/NumberButton" android:text="@string/button_20" />
-            <TextView android:id="@+id/thirty" style="@style/NumberButton" android:text="@string/button_30" />
-       </LinearLayout>
+        <TextView android:id="@+id/result" style="@style/ResultRow"/>
+        <TextView android:id="@+id/expression" style="@style/ExpressionRow"/>
 
         <LinearLayout style="@style/NumberButtonRow">
-            <TextView android:id="@+id/forty" style="@style/NumberButton" android:text="@string/button_40" />
-            <TextView android:id="@+id/fifty" style="@style/NumberButton" android:text="@string/button_50" />
-            <TextView android:id="@+id/sixty" style="@style/NumberButton" android:text="@string/button_60" />
+            <TextView android:id="@+id/ten" style="@style/NumberButton" android:text="@string/button_10"/>
+            <TextView android:id="@+id/twenty" style="@style/NumberButton" android:text="@string/button_20"/>
+            <TextView android:id="@+id/thirty" style="@style/NumberButton" android:text="@string/button_30"/>
         </LinearLayout>
 
         <LinearLayout style="@style/NumberButtonRow">
-            <TextView android:id="@+id/seventy" style="@style/NumberButton" android:text="@string/button_70" />
-            <TextView android:id="@+id/eighty" style="@style/NumberButton" android:text="@string/button_80" />
-            <TextView android:id="@+id/ninety" style="@style/NumberButton" android:text="@string/button_90" />
+            <TextView android:id="@+id/forty" style="@style/NumberButton" android:text="@string/button_40"/>
+            <TextView android:id="@+id/fifty" style="@style/NumberButton" android:text="@string/button_50"/>
+            <TextView android:id="@+id/sixty" style="@style/NumberButton" android:text="@string/button_60"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/NumberButtonRow">
+            <TextView android:id="@+id/seventy" style="@style/NumberButton" android:text="@string/button_70"/>
+            <TextView android:id="@+id/eighty" style="@style/NumberButton" android:text="@string/button_80"/>
+            <TextView android:id="@+id/ninety" style="@style/NumberButton" android:text="@string/button_90"/>
         </LinearLayout>
 
 
         <LinearLayout style="@style/NumberButtonRow">
-            <TextView android:id="@+id/oneHundred" style="@style/NumberButton" android:text="@string/button_100" />
-            <TextView android:id="@+id/clear" style="@style/NumberButton" android:text="@string/button_clear" />
-            <TextView android:id="@+id/backup" style="@style/NumberButton" android:text="@string/button_back" />
+            <TextView android:id="@+id/oneHundred" style="@style/NumberButton" android:text="@string/button_100"/>
+            <TextView android:id="@+id/clear" style="@style/NumberButton" android:text="@string/button_clear"/>
+            <TextView android:id="@+id/backup" style="@style/NumberButton" android:text="@string/button_x"/>
         </LinearLayout>
 
-        <TextView android:id="@+id/payout" style="@style/CalculateButtonStyle" android:text="@string/button_payout"/>
+        <LinearLayout style="@style/NumberButtonRow">
+            <TextView android:id="@+id/payout" style="@style/NumberButton" android:text="@string/button_payout"/>
+            <TextView android:id="@+id/split" style="@style/NumberButton" android:text="@string/button_split"/>
+        </LinearLayout>
 
     </LinearLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>
